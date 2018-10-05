@@ -1,1 +1,4 @@
-npm install jwt-decode@2.2.0
+instalar node 8.x
+npm install -g @angular/cli@6.0.7
+npm install bootstrap@4.1.1 --save
+npm install jwt-decode@2.2.0 --save
