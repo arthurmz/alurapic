@@ -16,6 +16,7 @@ export class AuthService {
     private userService: UserService) {}
 
   authenticate(userName: string, password: string){
+    console.log('Entrou no auth.authenticate');
     return this.http
       .post(API_URL + '/user/login',
       {userName: userName, password: password},

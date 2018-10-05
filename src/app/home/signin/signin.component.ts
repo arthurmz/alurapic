@@ -27,7 +27,7 @@ export class SignInComponent implements OnInit {
     }
 
     login(){
-        console.log('autenticando');
+        console.log('SigninComponent.autenticando');
 
         const userName = this.loginForm.get('userName').value;
         const password = this.loginForm.get('password').value;
@@ -35,7 +35,9 @@ export class SignInComponent implements OnInit {
         this.authService
             .authenticate(userName, password)
             .subscribe(
-                () => this.router.navigate(['user', userName]),
+                () => {
+                    console.log('Sucesso, routeando para user');
+                    this.router.navigate(['user', userName])},
                 err =>{
                     console.log(err)
                     this.loginForm.reset();
